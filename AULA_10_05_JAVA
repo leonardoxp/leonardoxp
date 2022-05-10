@@ -1,0 +1,37 @@
+<script type="text/javascript">
+	function validarCredenciais(){
+		var usuario = document.getElementById("iptUsuario").value;
+		var senha = document.getElementById("iptSenha").value;
+		const userValido = 'admin';
+		const passwordValido = '123'
+		//Credenciais válidas...
+		if(usuario == userValido && senha == passwordValido){
+			alert('Parabéns ' + usuario + ', suas credenciais são válidas.' );
+		}else{
+			alert('ATENÇÃO! Usuario ou senha inválido.' );
+		}
+	}
+</script>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="stylus.css">
+		<title>Usando Evento JS onClick</title>
+	</head>
+	<body >	
+		<h3>Login </h3>
+		<hr>
+		<div class="campo">
+			<label for="iptUsuario">Usuário: </label>
+			<input id="iptUsuario" type="text" required placeholder="Informe o usuário"/>
+		</div>
+		<div class="campo">
+			<label for="iptSenha">Senha: </label>
+			<input id="iptSenha" type="password" required placeholder="Informe a senha"/>
+		</div>
+		<input class="botao submit" id="iptSubmit" type="submit" value="Submeter" onclick="validarCredenciais();" />
+	</body>
+</html>
